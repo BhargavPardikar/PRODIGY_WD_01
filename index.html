@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>We Camp !!! </title>
+  <link rel = "stylesheet" href = "style.css" > 
+  <link rel = "stylesheet" href = " https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" > 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+  <link rel="icon" type="image/x-icon" href="/Javascript/R_L_P/assets/img/favicon.png">
+</head>
+
+<body> 
+  <header class="header" id="header ">
+    <nav class="nav container">
+        <a href="#" class="nav__logo"  id="nav-logo">
+          <img src = "assets/img/logo.svg" alt="logo">
+        </a>
+
+     <div class="nav__menu show-menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#" class="nav__link">Home</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#" class="nav__link">Pricing</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#" class="nav__link">Events</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#" class="nav__link">Contact</a>
+        </li>
+      </ul>
+
+        <div class="nav__button">
+          <a href="#" class="nav__button-link">Login</a>
+          <a href="#" class="nav__button-ghost">Get Started</a>
+        </div>
+
+        <div class="nav__close" id="nav-close">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <!-- <div class="nav__toggle" id="nav-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div> -->
+     </div>
+  
+      </nav>
+  </header>
+
+  <!-- Main Class  -->
+  <main class="main">
+    <section class="home">
+      <div class="home__container conatainer">
+        <div class="home__content">
+          <div class="home__data">
+            <h3 class="home__subtitle">A LIFETIME EXPERIENCE</h3>
+          </div>
+
+          <h1 class="home__title"> Camping Events to Remember <br></h1>
+
+          <p class="home__description">
+            Camp anywhere anytime without any hassle.
+            <br> Enjoy!
+          </p>
+
+          <a href="#" class="home__button">Explore Locations</a>
+        </div>
+
+        <!-- <img src="assets/img/bird-1.svg" alt="Bird 1 " class="home__birds-1"> -->
+        <img src="assets/img/bird-2.svg" alt="Bird 2 " class="home__birds-2">
+      </div>
+
+      <div class="home__images">
+        <img src="assets/img/img-4.svg" alt="Image" class="home__image 4">
+        <img src="assets/img/img-3.svg" alt="Image" class="home__image 3">
+        <img src="assets/img/img-2.svg" alt="Image" class="home__image 2">
+        <img src="assets/img/img-1.svg" alt="Image" class="home__image 1">
+      </div>
+    </section>
+  </main>
+       
+
+</body>
+<script >
+  /*=============== SHOW MENU ===============*/
+const navMenu = document.getElementById("nav-menu");
+const navToggle = document.getElementById("nav-logo");
+const navClose = document.getElementById("nav-close");
+
+if(navToggle){
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.add('show-menu');
+  })
+}
+
+if(navClose){
+  navClose.addEventListener('click', () => {
+    navMenu.classList.remove('show-menu');
+  })
+}
+
+/*=============== REMOVE MENU MOBILE ===============*/
+const navLink = document.getElementById(".nav__link")
+const linkAction  = () => {
+  const navMenu = document.getElementById("nav-menu")
+  navMenu.classList.remove("show-menu")
+}
+//  navLink.forEach(n => n.addEventListener("click", linkAction));
+
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+
+ const  bgHeader = () => {
+  const header = document.getElementById("header")
+  this.scrollY >= 50? header.classList.add("bg-header")
+                    : header.classList.remove("bg-header")
+ }
+window.addEventListener("scroll", bgHeader)
+
+/*=============== GSAP ANIMATION ===============*/
+
+</script>
+
+</html>
